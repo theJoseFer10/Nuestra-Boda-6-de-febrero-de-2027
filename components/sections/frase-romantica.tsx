@@ -1,16 +1,61 @@
 import { OrnementoFlores, SiluetaNovia, SiluetaNovio } from "./ornamentos"
 
-const NOVIOS = [
-  { nombre: "Cecilia Yasmin García García", Silueta: SiluetaNovia },
-  { nombre: "Luis Felipe Arenas Camacho", Silueta: SiluetaNovio },
-]
+type Novio = {
+  iniciales: string
+  Silueta: typeof SiluetaNovia
+  padres: [string, string]
+  parentesco: string
+}
+
+const NOVIA: Novio = {
+  iniciales: "Ceci",
+  Silueta: SiluetaNovia,
+  padres: ["José Alberto García Reyes", "María del Rosario García Polanco"],
+  parentesco: "de la novia",
+}
+
+const NOVIO: Novio = {
+  iniciales: "Felipe",
+  Silueta: SiluetaNovio,
+  padres: ["Felipe Jesús Arenas López", "María Yesenia Camacho Polanco"],
+  parentesco: "del novio",
+}
+
+function Padres({ novio, className }: { novio: Novio; className?: string }) {
+  return (
+    <div className={className}>
+      <p className="font-sans text-[0.55rem] uppercase tracking-[0.32em] text-primary/70 sm:text-[0.6rem]">
+        Padres {novio.parentesco}
+      </p>
+      <ul className="mt-2 space-y-1.5 font-serif text-[0.78rem] leading-snug text-foreground/80 italic sm:text-sm">
+        {novio.padres.map((nombre) => (
+          <li key={nombre}>{nombre}</li>
+        ))}
+      </ul>
+    </div>
+  )
+}
+
+function Retrato({ novio }: { novio: Novio }) {
+  const { iniciales, Silueta } = novio
+
+  return (
+    <figure className="flex flex-col items-center">
+      <Silueta className="h-56 w-auto text-primary/35 sm:h-64 lg:h-72" />
+      <figcaption className="-mt-5 font-script text-4xl leading-none text-primary sm:text-5xl">
+        {iniciales}
+      </figcaption>
+    </figure>
+  )
+}
 
 export default function FraseRomantica() {
   return (
     <header className="flex w-full flex-col items-center text-center">
       <OrnementoFlores className="h-12 w-28 opacity-85 sm:h-14 sm:w-36" />
+
       <p className="mt-6 font-serif text-3xl leading-relaxed text-foreground italic sm:text-4xl md:text-5xl">
-        «Dos corazones, una promsea y toda una vida por delante ¿Nos acompañas a decir ``si``?»
+        «Dos corazones, una promesa y toda una vida por delante ¿Nos acompañas a decir “sí”?»
       </p>
 
       <div className="mt-8 flex items-center gap-4">
@@ -22,18 +67,37 @@ export default function FraseRomantica() {
         <span aria-hidden className="h-px w-12 bg-border sm:w-16" />
       </div>
 
-      <div className="mt-4 grid w-full max-w-xl grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-8">
-        {NOVIOS.map(({ nombre, Silueta }) => (
-          <div
-            key={nombre}
-            className="relative flex h-40 flex-col items-center justify-end sm:h-48"
-          >
-            <Silueta className="pointer-events-none absolute bottom-0 left-1/2 h-36 w-auto -translate-x-1/2 text-primary/15 sm:h-44" />
-            <span className="relative z-10 pb-5 font-sans text-xs uppercase tracking-[0.35em] text-primary sm:text-[0.7rem]">
-              {nombre}
-            </span>
-          </div>
-        ))}
+      <p className="mt-8 max-w-md font-serif text-base leading-relaxed text-foreground/75 italic sm:text-lg">
+        Con la bendición de Dios y de nuestros padres
+      </p>
+
+      <div className="mt-10 flex w-full flex-col items-center gap-8 lg:flex-row lg:items-center lg:justify-center lg:gap-4">
+        <div className="flex items-center justify-center gap-3 sm:gap-5 lg:gap-4">
+          <Padres novio={NOVIA} className="w-28 text-right sm:w-32" />
+          <Retrato novio={NOVIA} />
+        </div>
+
+        <span
+          aria-hidden
+          className="font-script text-5xl leading-none text-primary/60 sm:text-6xl"
+        >
+          &amp;
+        </span>
+
+        <div className="flex items-center justify-center gap-3 sm:gap-5 lg:gap-4">
+          <Retrato novio={NOVIO} />
+          <Padres novio={NOVIO} className="w-28 text-left sm:w-32" />
+        </div>
+      </div>
+
+      <div className="mt-10 flex flex-col items-center">
+        <p className="font-sans text-[0.55rem] uppercase tracking-[0.32em] text-primary/70 sm:text-[0.6rem]">
+          Padrinos de velación
+        </p>
+        <ul className="mt-2 space-y-1.5 font-serif text-[0.78rem] leading-snug text-foreground/80 italic sm:text-sm">
+          <li>Rosa Rubio Preciado</li>
+          <li>Jesús García Polanco</li>
+        </ul>
       </div>
     </header>
   )

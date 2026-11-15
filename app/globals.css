@@ -39,6 +39,7 @@
   --sidebar-ring: oklch(0.4731 0.1095 29.1462);
   --font-sans: var(--font-playfair-display), 'Playfair Display', serif;
   --font-serif: var(--font-lora), 'Lora', serif;
+  --font-script: var(--font-great-vibes), 'Great Vibes', cursive;
   --font-mono: 'Courier New', monospace;
   --radius: 0.25rem;
   --shadow-x: 0px;
@@ -94,6 +95,7 @@
   --sidebar-ring: oklch(0.7637 0.0712 37.5651);
   --font-sans: var(--font-playfair-display), 'Playfair Display', serif;
   --font-serif: var(--font-lora), 'Lora', serif;
+  --font-script: var(--font-great-vibes), 'Great Vibes', cursive;
   --font-mono: 'Courier New', monospace;
   --radius: 0.25rem;
   --shadow-x: 0px;
@@ -149,6 +151,7 @@
   --font-sans: var(--font-sans);
   --font-mono: var(--font-mono);
   --font-serif: var(--font-serif);
+  --font-script: var(--font-script);
 
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);

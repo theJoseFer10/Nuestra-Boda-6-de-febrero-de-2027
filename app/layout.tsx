@@ -1,6 +1,13 @@
 import type { Metadata } from "next";
-import { Lora, Playfair_Display } from "next/font/google";
+import { Great_Vibes, Lora, Playfair_Display } from "next/font/google";
 import "./globals.css";
+
+const greatVibes = Great_Vibes({
+  variable: "--font-great-vibes",
+  subsets: ["latin"],
+  weight: "400",
+  display: "swap",
+});
 
 const playfair = Playfair_Display({
   variable: "--font-playfair-display",
@@ -25,7 +32,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="es"
-      className={`${playfair.variable} ${lora.variable} h-full antialiased`}
+      className={`${playfair.variable} ${lora.variable} ${greatVibes.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
