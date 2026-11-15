@@ -5,6 +5,7 @@ import Temporizador from "./temporizador"
 import Reproductor from "./reproductor"
 import Ubicacion from "./ubicacion"
 import Itinerario from "./itinerario"
+import ConfirmarAsistencia from "./confirmar_asistencia"
 
 export default function InvitacionHero() {
   return (
@@ -62,6 +63,7 @@ export default function InvitacionHero() {
 
       <Ubicacion />
       <Itinerario />
+      <ConfirmarAsistencia />
     </>
   )
 }
