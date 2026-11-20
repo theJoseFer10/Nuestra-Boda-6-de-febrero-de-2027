@@ -1,4 +1,4 @@
-import { OrnementoFlores, SiluetaNovia, SiluetaNovio } from "./ornamentos"
+import { OrnementoFlores, SiluetaNovia, SiluetaNovio, Vela } from "./ornamentos"
 
 type Novio = {
   iniciales: string
@@ -53,7 +53,9 @@ export default function FraseRomantica() {
   return (
     <header className="flex w-full flex-col items-center text-center">
       <OrnementoFlores className="h-12 w-28 opacity-85 sm:h-14 sm:w-36" />
-
+      <p className="mt-6 font-serif text-3xl leading-relaxed text-foreground italic sm:text-4xl md:text-5xl">
+        ¡Nos casamos!
+      </p>
       <p className="mt-6 font-serif text-3xl leading-relaxed text-foreground italic sm:text-4xl md:text-5xl">
         «Dos corazones, una promesa y toda una vida por delante ¿Nos acompañas a decir “sí”?»
       </p>
@@ -91,6 +93,7 @@ export default function FraseRomantica() {
       </div>
 
       <div className="mt-10 flex flex-col items-center">
+        <Vela className="mb-4 h-24 w-auto text-primary/45 sm:h-28" />
         <p className="font-sans text-[0.55rem] uppercase tracking-[0.32em] text-primary/70 sm:text-[0.6rem]">
           Padrinos de velación
         </p>

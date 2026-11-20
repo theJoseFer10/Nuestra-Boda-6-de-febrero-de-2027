@@ -197,6 +197,301 @@ export function SiluetaNovio({ className }: { className?: string }) {
   )
 }
 
+export function Vela({ className }: { className?: string }) {
+  return (
+    <svg
+      aria-hidden
+      viewBox="0 0 100 200"
+      className={cn("fill-current", className)}
+    >
+      <g
+        fill="none"
+        stroke="currentColor"
+        strokeWidth={1.1}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <path
+          d="M50 20c-5 7-8 13-8 18 0 5 3.6 9 8 9s8-4 8-9c0-5-3-11-8-18Z"
+          fill="currentColor"
+          fillOpacity={0.08}
+          strokeOpacity={0.9}
+        />
+        <path
+          d="M50 31c-2.4 3.6-3.6 6.4-3.6 9a3.6 3.6 0 0 0 7.2 0c0-2.6-1.2-5.4-3.6-9Z"
+          fill="currentColor"
+          fillOpacity={0.2}
+          strokeOpacity={0.7}
+        />
+        <path d="M50 47v9" strokeOpacity={0.6} />
+        <path
+          d="M35 58c0-2 6.8-3.5 15-3.5s15 1.5 15 3.5v91c-9 3-21 3-30 0V58Z"
+          fill="currentColor"
+          fillOpacity={0.07}
+          strokeOpacity={0.85}
+        />
+        <path
+          d="M35 58c0 2.4 6.8 4.2 15 4.2s15-1.8 15-4.2"
+          strokeOpacity={0.7}
+        />
+        <path
+          d="M41 60c.5 7-3 10-3 17M59 60c-.5 7 3 10 3 17"
+          strokeOpacity={0.45}
+        />
+        <path d="M40 149v-72M60 149v-72" strokeOpacity={0.3} />
+        <path
+          d="M50 91c-3-4-8.5-2.4-8.5 2.6 0 4.8 8.5 9.4 8.5 9.4s8.5-4.6 8.5-9.4c0-5-5.5-6.6-8.5-2.6Z"
+          fill="currentColor"
+          fillOpacity={0.12}
+          strokeOpacity={0.6}
+        />
+        <path d="M50 103v9M45 112h10" strokeOpacity={0.4} />
+        <path
+          d="M33 149c5 2 29 2 34 0l-3 9H36l-3-9Z"
+          fill="currentColor"
+          fillOpacity={0.1}
+          strokeOpacity={0.8}
+        />
+        <path
+          d="M26 158c0 4.5 10.8 8 24 8s24-3.5 24-8-10.8-8-24-8-24 3.5-24 8Z"
+          fill="currentColor"
+          fillOpacity={0.07}
+          strokeOpacity={0.75}
+        />
+        <path d="M46 166v13M54 166v13" strokeOpacity={0.6} />
+        <path
+          d="M38 179h24l4 7H34l4-7Z"
+          fill="currentColor"
+          fillOpacity={0.12}
+          strokeOpacity={0.8}
+        />
+        <path d="M31 186h38" strokeOpacity={0.5} />
+      </g>
+    </svg>
+  )
+}
+
+export function Regalo({ className }: { className?: string }) {
+  return (
+    <svg
+      aria-hidden
+      viewBox="0 0 100 120"
+      className={cn("fill-current", className)}
+    >
+      <g
+        fill="none"
+        stroke="currentColor"
+        strokeWidth={1.1}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <path
+          d="M22 46h56v58c-8 3-48 3-56 0V46Z"
+          fill="currentColor"
+          fillOpacity={0.07}
+          strokeOpacity={0.85}
+        />
+        <path
+          d="M18 38h64v12H18V38Z"
+          fill="currentColor"
+          fillOpacity={0.1}
+          strokeOpacity={0.9}
+        />
+        <path
+          d="M46 50h8v54h-8V50Z"
+          fill="currentColor"
+          fillOpacity={0.08}
+          strokeOpacity={0.7}
+        />
+        <path d="M50 54v10M50 70v10M50 86v10" strokeOpacity={0.4} />
+        <path
+          d="M49 37c-7-3-15-8-16-14-1-4 2-7 6-6 6 1 9 10 10 20Z"
+          fill="currentColor"
+          fillOpacity={0.09}
+          strokeOpacity={0.8}
+        />
+        <path
+          d="M51 37c7-3 15-8 16-14 1-4-2-7-6-6-6 1-9 10-10 20Z"
+          fill="currentColor"
+          fillOpacity={0.09}
+          strokeOpacity={0.8}
+        />
+        <path
+          d="M50 31c-3-3-3-7 0-9 3 2 3 6 0 9Z"
+          fill="currentColor"
+          fillOpacity={0.16}
+          strokeOpacity={0.9}
+        />
+        <path
+          d="M46 37h8l-2 6h-4l-2-6Z"
+          fill="currentColor"
+          fillOpacity={0.14}
+          strokeOpacity={0.75}
+        />
+        <path
+          d="M27 63h12M61 63h12M26 104h48"
+          strokeOpacity={0.35}
+        />
+        <circle
+          cx="50"
+          cy="76"
+          r="4"
+          fill="currentColor"
+          fillOpacity={0.16}
+          strokeOpacity={0.6}
+        />
+      </g>
+    </svg>
+  )
+}
+
+export function Templo({ className }: { className?: string }) {
+  return (
+    <svg
+      aria-hidden
+      viewBox="0 0 100 200"
+      className={cn("fill-current", className)}
+    >
+      <g
+        fill="none"
+        stroke="currentColor"
+        strokeWidth={1.1}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <path d="M50 9v13M45 14h10" strokeOpacity={0.8} />
+        <path
+          d="M36 34 50 22l14 12Z"
+          fill="currentColor"
+          fillOpacity={0.1}
+          strokeOpacity={0.85}
+        />
+        <path
+          d="M38 34h24v30H38V34Z"
+          fill="currentColor"
+          fillOpacity={0.07}
+          strokeOpacity={0.85}
+        />
+        <path
+          d="M44 42a6 6 0 0 1 12 0v9H44v-9Z"
+          fill="currentColor"
+          fillOpacity={0.12}
+          strokeOpacity={0.75}
+        />
+        <path d="M50 43v4M47 54h6" strokeOpacity={0.5} />
+        <path
+          d="M18 60 50 40l32 20"
+          fill="currentColor"
+          fillOpacity={0.08}
+          strokeOpacity={0.85}
+        />
+        <path
+          d="M22 60h56v104H22V60Z"
+          fill="currentColor"
+          fillOpacity={0.06}
+          strokeOpacity={0.8}
+        />
+        <path d="M26 62v100M74 62v100" strokeOpacity={0.3} />
+        <path
+          d="M30 82c0-4 3-7 7-7s7 3 7 7v18H30V82ZM56 82c0-4 3-7 7-7s7 3 7 7v18H56V82Z"
+          fill="currentColor"
+          fillOpacity={0.08}
+          strokeOpacity={0.6}
+        />
+        <path d="M37 76v25M63 76v25" strokeOpacity={0.4} />
+        <path
+          d="M42 164v-31a8 8 0 0 1 16 0v31H42Z"
+          fill="currentColor"
+          fillOpacity={0.12}
+          strokeOpacity={0.8}
+        />
+        <path d="M50 133v31M44 149h12" strokeOpacity={0.5} />
+        <path
+          d="M18 164h64v8H18v-8Z"
+          fill="currentColor"
+          fillOpacity={0.1}
+          strokeOpacity={0.8}
+        />
+        <path
+          d="M14 172h72v6H14v-6Z"
+          fill="currentColor"
+          fillOpacity={0.12}
+          strokeOpacity={0.75}
+        />
+        <path d="M22 178h56" strokeOpacity={0.45} />
+      </g>
+    </svg>
+  )
+}
+
+export function SalonEventos({ className }: { className?: string }) {
+  return (
+    <svg
+      aria-hidden
+      viewBox="0 0 100 140"
+      className={cn("fill-current", className)}
+    >
+      <g
+        fill="none"
+        stroke="currentColor"
+        strokeWidth={1.1}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <path d="M10 24c12 9 28 9 40 0 12 9 28 9 40 0" strokeOpacity={0.5} />
+        <circle cx="30" cy="29" r="1.4" fill="currentColor" fillOpacity={0.3} />
+        <circle cx="50" cy="29" r="1.4" fill="currentColor" fillOpacity={0.3} />
+        <circle cx="70" cy="29" r="1.4" fill="currentColor" fillOpacity={0.3} />
+        <path
+          d="M8 40 16 30h68l8 10"
+          fill="currentColor"
+          fillOpacity={0.08}
+          strokeOpacity={0.85}
+        />
+        <path
+          d="M8 40h84v12H8V40Z"
+          fill="currentColor"
+          fillOpacity={0.1}
+          strokeOpacity={0.9}
+        />
+        <path
+          d="M12 52h76v76H12V52Z"
+          fill="currentColor"
+          fillOpacity={0.06}
+          strokeOpacity={0.8}
+        />
+        <path d="M24 52v76M38 52v76M62 52v76M76 52v76" strokeOpacity={0.3} />
+        <path
+          d="M40 128V90a10 10 0 0 1 20 0v38H40Z"
+          fill="currentColor"
+          fillOpacity={0.12}
+          strokeOpacity={0.8}
+        />
+        <path d="M50 80v48" strokeOpacity={0.5} />
+        <path
+          d="M17 66h9v16h-9V66ZM74 66h9v16h-9V66Z"
+          fill="currentColor"
+          fillOpacity={0.08}
+          strokeOpacity={0.6}
+        />
+        <path d="M21.5 66v16M78.5 66v16" strokeOpacity={0.4} />
+        <path
+          d="M6 128h88v6H6v-6Z"
+          fill="currentColor"
+          fillOpacity={0.1}
+          strokeOpacity={0.8}
+        />
+        <path
+          d="M4 134h92v5H4v-5Z"
+          fill="currentColor"
+          fillOpacity={0.12}
+          strokeOpacity={0.75}
+        />
+      </g>
+    </svg>
+  )
+}
+
 export function EsquinasRombo({ className }: { className?: string }) {
   const base =
     "pointer-events-none absolute size-2.5 rotate-45 border border-primary bg-background"
