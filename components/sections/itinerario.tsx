@@ -1,6 +1,6 @@
 "use client"
 
-import { EsquinasRombo, OrnementoFlores } from "./ornamentos"
+import { DivisorVictoriano, EsquinasRombo, OrnementoFlores } from "./ornamentos"
 
 const EVENTOS = [
   { titulo: "Ceremonia", hora: "3:00 PM" },
@@ -18,20 +18,14 @@ export default function Itinerario() {
         <p className="mt-6 font-sans text-xs uppercase tracking-[0.35em] text-primary">
           Horarios
         </p>
-        <h2 className="mt-4 font-serif text-4xl leading-snug text-foreground italic sm:text-5xl md:text-6xl">
+        <h2 className="titulo-victoriano mt-4 font-serif text-4xl leading-snug text-foreground italic sm:text-5xl md:text-6xl">
           Itinerario
         </h2>
-        <div className="mt-7 flex items-center gap-4">
-          <span aria-hidden className="h-px w-12 bg-border sm:w-16" />
-          <span className="font-sans text-[0.68rem] uppercase tracking-[0.35em] text-muted-foreground sm:text-xs">
-            06 · 02 · 2027
-          </span>
-          <span aria-hidden className="h-px w-12 bg-border sm:w-16" />
-        </div>
+        <DivisorVictoriano className="mt-7 max-w-xs" label="06 · 02 · 2027" />
       </header>
 
       <div className="relative z-10 w-full max-w-3xl">
-        <div className="relative border-2 border-primary/60 bg-card/50 p-1.5 shadow-sm">
+        <div className="marco-victoriano relative border-2 border-primary/60 bg-card/50 p-1.5 shadow-sm">
           <div className="border border-dashed border-secondary/80 px-6 py-10 sm:px-12 sm:py-14">
             <ol className="relative mx-auto flex max-w-xl flex-col">
               {EVENTOS.map((evento, indice) => (

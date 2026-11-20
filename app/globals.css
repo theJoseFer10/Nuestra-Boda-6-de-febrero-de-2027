@@ -183,6 +183,51 @@
     @apply bg-background text-foreground;
     letter-spacing: var(--tracking-normal);
   }
+
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background:
+      radial-gradient(ellipse 85% 55% at 50% 0%, color-mix(in oklch, var(--card) 45%, transparent), transparent 70%),
+      radial-gradient(ellipse 85% 55% at 50% 100%, color-mix(in oklch, var(--muted) 40%, transparent), transparent 70%);
+  }
+
+  body::after {
+    content: "";
+    position: fixed;
+    inset: 0.85rem;
+    z-index: 40;
+    pointer-events: none;
+    border: 1px solid color-mix(in oklch, var(--primary) 32%, transparent);
+    outline: 1px solid color-mix(in oklch, var(--secondary) 50%, transparent);
+    outline-offset: 4px;
+  }
+}
+
+.marco-victoriano {
+  background-image: linear-gradient(
+    140deg,
+    color-mix(in oklch, var(--card) 70%, transparent),
+    color-mix(in oklch, var(--background) 96%, transparent) 55%,
+    color-mix(in oklch, var(--card) 60%, transparent)
+  );
+  box-shadow:
+    inset 0 0 0 1px color-mix(in oklch, var(--background) 85%, transparent),
+    0 18px 40px -28px color-mix(in oklch, var(--primary) 55%, transparent);
+}
+
+.titulo-victoriano {
+  font-variant-ligatures: common-ligatures;
+  text-wrap: balance;
+}
+
+@media (max-width: 767px) {
+  body::after {
+    display: none;
+  }
 }
 
 @keyframes foto-desvanecer {

@@ -492,16 +492,88 @@ export function SalonEventos({ className }: { className?: string }) {
   )
 }
 
-export function EsquinasRombo({ className }: { className?: string }) {
-  const base =
-    "pointer-events-none absolute size-2.5 rotate-45 border border-primary bg-background"
+function Esquina({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 32 32"
+      fill="none"
+      aria-hidden
+      className={cn("pointer-events-none absolute size-8 text-primary/60", className)}
+    >
+      <path
+        d="M1 14C1 6.8 6.8 1 14 1"
+        stroke="currentColor"
+        strokeWidth="1"
+        strokeLinecap="round"
+      />
+      <path
+        d="M1 21C1 8.4 8.4 1 21 1"
+        stroke="currentColor"
+        strokeWidth="0.55"
+        strokeLinecap="round"
+        opacity="0.5"
+      />
+      <path
+        d="M3 11c1-4 4-7 8-8-3 2-5 4.5-6 8H3Z"
+        fill="currentColor"
+        opacity="0.35"
+      />
+      <circle cx="2.5" cy="2.5" r="1.2" fill="currentColor" />
+    </svg>
+  )
+}
 
+export function EsquinasRombo({ className }: { className?: string }) {
   return (
     <>
-      <span aria-hidden className={cn(base, "-top-[5px] -left-[5px]", className)} />
-      <span aria-hidden className={cn(base, "-top-[5px] -right-[5px]", className)} />
-      <span aria-hidden className={cn(base, "-bottom-[5px] -left-[5px]", className)} />
-      <span aria-hidden className={cn(base, "-bottom-[5px] -right-[5px]", className)} />
+      <Esquina className={cn("top-0 left-0", className)} />
+      <Esquina className={cn("top-0 right-0 rotate-90", className)} />
+      <Esquina className={cn("right-0 bottom-0 rotate-180", className)} />
+      <Esquina className={cn("bottom-0 left-0 -rotate-90", className)} />
     </>
+  )
+}
+
+export function Floron({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden className={cn("size-4", className)}>
+      <path
+        d="M12 2c0 4-3 6-5 8-1.5 1.5-2 3-2 5a5 5 0 0 0 5 5c1.2 0 2.2-.4 3-1 .8.6 1.8 1 3 1a5 5 0 0 0 5-5c0-2-.5-3.5-2-5-2-2-5-4-5-8Z"
+        stroke="currentColor"
+        strokeWidth="0.9"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M12 8v11M8.5 20h7"
+        stroke="currentColor"
+        strokeWidth="0.9"
+        strokeLinecap="round"
+      />
+    </svg>
+  )
+}
+
+export function DivisorVictoriano({
+  label,
+  className,
+}: {
+  label?: string
+  className?: string
+}) {
+  return (
+    <div
+      aria-hidden={label ? undefined : true}
+      className={cn("flex w-full items-center gap-3", className)}
+    >
+      <span className="h-px flex-1 bg-gradient-to-r from-transparent via-border to-border" />
+      {label ? (
+        <span className="whitespace-nowrap font-sans text-[0.68rem] uppercase tracking-[0.35em] text-muted-foreground sm:text-xs">
+          {label}
+        </span>
+      ) : (
+        <Floron className="size-4 shrink-0 text-primary/70" />
+      )}
+      <span className="h-px flex-1 bg-gradient-to-l from-transparent via-border to-border" />
+    </div>
   )
 }

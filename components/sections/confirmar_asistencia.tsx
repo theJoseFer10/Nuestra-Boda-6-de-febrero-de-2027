@@ -6,7 +6,7 @@ import { X } from "lucide-react"
 import { cn } from "cn"
 
 import { buttonVariants } from "@/components/ui/button"
-import { EsquinasRombo, OrnementoFlores } from "./ornamentos"
+import { DivisorVictoriano, EsquinasRombo, OrnementoFlores } from "./ornamentos"
 
 const ANFITRIONES = [
   { nombre: "", numero: "523751258249" },
@@ -27,7 +27,7 @@ function crearEnlace(numero: string, mensaje: string) {
 }
 
 const campo =
-  "mt-2 w-full rounded-sm border border-secondary/70 bg-background px-4 py-3 font-serif text-base text-foreground outline-none transition-colors placeholder:text-muted-foreground/60 focus:border-primary"
+  "mt-2 w-full rounded-none border border-secondary/70 bg-background px-4 py-3 font-serif text-base text-foreground outline-none transition-colors placeholder:text-muted-foreground/60 focus:border-primary"
 
 const etiqueta =
   "font-sans text-[0.62rem] uppercase tracking-[0.3em] text-primary"
@@ -61,9 +61,10 @@ export default function ConfirmarAsistencia() {
         <p className="mt-6 font-sans text-xs uppercase tracking-[0.35em] text-primary">
           Nos encantaría contar contigo
         </p>
-        <h2 className="mt-4 font-serif text-4xl leading-snug text-foreground italic sm:text-5xl md:text-6xl">
+        <h2 className="titulo-victoriano mt-4 font-serif text-4xl leading-snug text-foreground italic sm:text-5xl md:text-6xl">
           Confirma tu asistencia
         </h2>
+        <DivisorVictoriano className="mt-6 max-w-xs" />
         <p className="mt-5 max-w-md font-serif text-base leading-relaxed text-foreground/75 italic sm:text-lg">
           Ayúdanos a preparar todo para compartir este día tan especial.
         </p>
@@ -90,13 +91,13 @@ export default function ConfirmarAsistencia() {
 
         <Dialog.Portal>
           <Dialog.Backdrop className="fixed inset-0 min-h-dvh bg-foreground/35 backdrop-blur-sm transition-opacity duration-150 data-ending-style:opacity-0 data-starting-style:opacity-0 supports-[-webkit-touch-callout:none]:absolute" />
-          <Dialog.Popup className="fixed top-1/2 left-1/2 z-50 w-[calc(100vw-2rem)] max-w-lg -translate-x-1/2 -translate-y-1/2 border-2 border-primary/60 bg-background p-1.5 shadow-2xl transition-[scale,opacity] duration-150 ease-out data-ending-style:scale-[0.97] data-ending-style:opacity-0 data-starting-style:scale-[0.97] data-starting-style:opacity-0">
+          <Dialog.Popup className="marco-victoriano fixed top-1/2 left-1/2 z-50 w-[calc(100vw-2rem)] max-w-lg -translate-x-1/2 -translate-y-1/2 border-2 border-primary/60 bg-background p-1.5 shadow-2xl transition-[scale,opacity] duration-150 ease-out data-ending-style:scale-[0.97] data-ending-style:opacity-0 data-starting-style:scale-[0.97] data-starting-style:opacity-0">
             <div className="relative border border-dashed border-secondary/80 px-6 py-8 sm:px-8">
               <EsquinasRombo />
 
               <Dialog.Close
                 aria-label="Cerrar"
-                className="absolute top-4 right-4 grid size-8 place-items-center rounded-full text-muted-foreground transition-colors hover:bg-muted hover:text-foreground focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
+                className="absolute top-4 right-4 grid size-8 place-items-center rounded-none border border-primary/40 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
               >
                 <X className="size-4" />
               </Dialog.Close>

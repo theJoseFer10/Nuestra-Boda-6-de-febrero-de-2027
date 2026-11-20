@@ -1,4 +1,12 @@
-import { OrnementoFlores, SiluetaNovia, SiluetaNovio, Vela } from "./ornamentos"
+import Image from "next/image"
+import {
+  DivisorVictoriano,
+  EsquinasRombo,
+  OrnementoFlores,
+  SiluetaNovia,
+  SiluetaNovio,
+  Vela,
+} from "./ornamentos"
 
 type Novio = {
   iniciales: string
@@ -53,21 +61,29 @@ export default function FraseRomantica() {
   return (
     <header className="flex w-full flex-col items-center text-center">
       <OrnementoFlores className="h-12 w-28 opacity-85 sm:h-14 sm:w-36" />
-      <p className="mt-6 font-serif text-3xl leading-relaxed text-foreground italic sm:text-4xl md:text-5xl">
+      <figure className="relative mt-10 w-full max-w-md">
+        <div className="marco-victoriano relative border-2 border-primary/50 bg-background p-2 shadow-xl">
+          <div className="border border-secondary/70 p-1.5">
+            <Image
+              src="/manos.jpg"
+              alt="Manos"
+              width={566}
+              height={350}
+              sizes="(max-width: 768px) 100vw, 28rem"
+              className="h-auto w-full object-cover [filter:sepia(0.16)_saturate(0.98)]"
+            />
+          </div>
+          <EsquinasRombo />
+        </div>
+      </figure>
+      <p className="titulo-victoriano mt-6 font-serif text-3xl leading-relaxed text-foreground italic sm:text-4xl md:text-5xl">
         ¡Nos casamos!
       </p>
-      <p className="mt-6 font-serif text-3xl leading-relaxed text-foreground italic sm:text-4xl md:text-5xl">
+      <p className="titulo-victoriano mt-6 font-serif text-3xl leading-relaxed text-foreground italic sm:text-4xl md:text-5xl">
         «Dos corazones, una promesa y toda una vida por delante ¿Nos acompañas a decir “sí”?»
       </p>
 
-      <div className="mt-8 flex items-center gap-4">
-        <span aria-hidden className="h-px w-12 bg-border sm:w-16" />
-        <span
-          aria-hidden
-          className="size-1.5 rotate-45 border border-primary bg-background"
-        />
-        <span aria-hidden className="h-px w-12 bg-border sm:w-16" />
-      </div>
+      <DivisorVictoriano className="mt-8 max-w-xs" />
 
       <p className="mt-8 max-w-md font-serif text-base leading-relaxed text-foreground/75 italic sm:text-lg">
         Con la bendición de Dios y de nuestros padres
